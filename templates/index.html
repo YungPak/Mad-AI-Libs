@@ -1,19 +1,48 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <section>
-        <h2>Create Your Mad Libs Story!</h2>
-        <form method="POST" action="/">
-            <label for="adjective">Adjective:</label>
-            <input type="text" id="adjective" name="adjective" required>
-            
-            <label for="noun">Noun:</label>
-            <input type="text" id="noun" name="noun" required>
-            
-            <label for="verb">Verb:</label>
-            <input type="text" id="verb" name="verb" required>
-            
-            <button type="submit">Generate Story</button>
-        </form>
-    </section>
+<section>
+    <h2>Fill in the blanks!</h2>
+    <form method="POST" action="/">
+        <div class="story">
+            <p>
+                <span class="blurred">Once upon a time, a</span>
+                <input type="text" name="adjective1" placeholder="adjective" required class="blank">
+                <span class="blurred">and mysterious</span>
+                <input type="text" name="noun1" placeholder="noun" required class="blank">
+                <span class="blurred">decided to</span>
+                <input type="text" name="verb1" placeholder="verb" required class="blank">
+                <span class="blurred">in the enchanted forest.</span>
+            </p>
+            <p>
+                <span class="blurred">The</span>
+                <input type="text" name="adjective2" placeholder="adjective" required class="blank">
+                <span class="blurred">creature found a</span>
+                <input type="text" name="noun2" placeholder="noun" required class="blank">
+                <span class="blurred">and decided to</span>
+                <input type="text" name="verb2" placeholder="verb" required class="blank">
+                <span class="blurred">with it.</span>
+            </p>
+            <p>
+                <span class="blurred">It was the</span>
+                <input type="text" name="adjective3" placeholder="adjective" required class="blank">
+                <span class="blurred">day ever, and the</span>
+                <input type="text" name="noun3" placeholder="noun" required class="blank">
+                <span class="blurred">couldn’t stop</span>
+                <input type="text" name="verb3" placeholder="verb" required class="blank">
+                <span class="blurred">until the sun set.</span>
+            </p>
+            <p>
+                <span class="blurred">Under the starry sky, the</span>
+                <input type="text" name="adjective4" placeholder="adjective" required class="blank">
+                <span class="blurred">hero met a talking</span>
+                <input type="text" name="noun4" placeholder="noun" required class="blank">
+                <span class="blurred">and together they decided to</span>
+                <input type="text" name="verb4" placeholder="verb" required class="blank">
+                <span class="blurred">to save the world.</span>
+            </p>
+        </div>
+        <button type="submit">Generate My Story!</button>
+    </form>
+</section>
 {% endblock %}
