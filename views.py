@@ -2,10 +2,8 @@ import config
 from flask import render_template, request
 from openai import OpenAI
 
-# Initialize OpenAI client with API key
 client = OpenAI(api_key=config.OPENAI_API_KEY)
 
-# Initialize OpenAI client with your API key
 def configure_routes(app):
     @app.route("/", methods=["GET", "POST"])
     def index():
