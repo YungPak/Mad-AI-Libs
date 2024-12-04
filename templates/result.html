@@ -1,9 +1,17 @@
-{% extends "base.html" %}
-
-{% block content %}
-    <section>
-        <h2>Your Mad Libs Story</h2>
-        <p>{{ story }}</p>
-        <a href="/">Create Another Story</a>
-    </section>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Mad Libs Story</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='resultStyle.css') }}">
+</head>
+<body>
+    <div class="madlibs-container">
+        <h1>Your Mad Libs Story</h1>
+        <div class="story-output">
+            <p>{{ story|safe }}</p>
+        </div>
+        <a href="/" class="create-another">Create Another Story</a>
+    </div>
+</body>
+</html>
